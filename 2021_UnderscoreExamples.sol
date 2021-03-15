@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
-pragma experimental ABIEncoderV2;
+pragma experimental ABIEncoderV2; //ABI coder v2 is activated by default by v0.8.0
 /// @title Voting with delegation.
 contract underscore {
     
@@ -11,7 +11,7 @@ contract underscore {
     }
 
     modifier conditionalChangeAtoThirty() {
-      // _;
+      //_;
         if (a == 20){
             a = 30;  
         }
