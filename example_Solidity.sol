@@ -1,7 +1,13 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
-/// @title Voting with delegation.
 contract Ballot {
+    
+   // Declares a state variable `message` of type `string`.
+    // State variables are variables whose values are permanently stored in contract storage.
+    // The keyword `public` makes variables accessible from outside a contract
+    // and creates a function that other contracts or clients can call to access the value.
+    string public testString;
+    
     // This declares a new complex type which will
     // be used for variables later.
     // It will represent a single voter.
@@ -10,15 +16,24 @@ contract Ballot {
         bool voted;  // if true, that person already voted
         address delegate; // person delegated to
         uint vote;   // index of the voted proposal
+        party partito;
     }
 
     // This is a type for a single proposal.
     struct Proposal {
         bytes32 name;   // short name (up to 32 bytes)
         uint voteCount; // number of accumulated votes
+        // Defining an enumerator 
+        
     }
 
     address public chairperson;
+    
+    // Enum (partito politico)
+    enum party { Sinistra, Centro, Destra, PartitoPirata }  
+    
+    
+ 
 
     // This declares a state variable that
     // stores a `Voter` struct for each possible address.
